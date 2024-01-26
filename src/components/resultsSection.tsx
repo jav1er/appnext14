@@ -31,8 +31,8 @@ export function ResultsSection() {
           <span>Error: {error?.message}</span>
         ) : (
           <>
-            {data?.pages.map(page => (
-              <React.Fragment key={page.nextId}>
+            {data?.pages.map((page, key) => (
+              <React.Fragment key={key}>
                 {page?.map((movie: Movie) => (
                   <div key={movie.id}>
                     <div className="text-sm text-center font-semibold">
